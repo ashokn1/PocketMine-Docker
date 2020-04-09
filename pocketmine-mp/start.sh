@@ -10,7 +10,7 @@ if [ $BAD_COUNT -gt 0 ]; then
 	echo "For example:"
 	find /data /plugins ! -user pocketmine | head
 	echo "This may cause problems when running the server."
-	echo "If you mount /data and /plugins from a local directory, consider running \`chown -R 1000:1000 \$MOUNT\` (replace \$MOUNT with your local directory) (you may need sudo to run this)"
+	echo "If you mount /data and /plugins from a local directory, consider running \`chown -R 1004:1004 \$MOUNT\` (replace \$MOUNT with your local directory) (you may need sudo to run this)"
 	echo "==============="
 	# Continue running the server since this is not necessarily fatal
 fi

@@ -21,14 +21,14 @@ First, create the directories `data` and `plugins` somewhere to store the server
 mkdir data plugins
 ```
 
-Set the owner of these directories to user of UID `1000`.
+Set the owner of these directories to user of UID `1004`.
 Docker containers identify file owners using the UID,
-so if your current user is coincidentally also UID 1000 (you can check this with `echo $UID`),
+so if your current user is coincidentally also UID 1004 (you can check this with `echo $UID`),
 this operation might do nothing.
 Otherwise, you might need root access to change the owner of a directory:
 
 ```
-sudo chown -R 1000:1000 data plugins
+sudo chown -R 1004:1004 data plugins
 ```
 
 `data` will store the server data, and `plugins` will store the server plugins.

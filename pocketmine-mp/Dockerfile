@@ -35,8 +35,8 @@ MAINTAINER PMMP Team <team@pmmp.io>
 
 RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates wget
 
-RUN groupadd -g 1000 pocketmine
-RUN useradd -r -d /pocketmine -p "" -u 1000 -m -g pocketmine pocketmine
+RUN groupadd -g 1004 pocketmine
+RUN useradd -r -d /pocketmine -p "" -u 1004 -m -g pocketmine pocketmine
 
 WORKDIR /pocketmine
 COPY --from=0 /build/build/php/bin/php7 /usr/php
@@ -45,7 +45,7 @@ COPY --from=0 /build/PocketMine-MP.phar PocketMine-MP.phar
 ADD start.sh /usr/bin/start-pocketmine
 
 RUN mkdir /plugins /data
-RUN chown 1000:1000 /plugins /data . -R
+RUN chown 1004:1004 /plugins /data . -R
 RUN chmod o+x /usr/bin/php
 
 USER pocketmine
